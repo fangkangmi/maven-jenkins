@@ -63,5 +63,16 @@ pipeline {
           } 
       }
     
+    stage('Sonarqube Analysis - SAST')  
+      { 
+        steps  
+        { 
+           withSonarQubeEnv('SonarQube')  
+           { 
+              sh "mvn sonar:sonar -Dsonar.projectKey=maven-jenkins-pipeline -Dsonar.host.url=ADD_THE_SONAR_URL"  
+           } 
+        } 
+      } 
+    
     }
 }
