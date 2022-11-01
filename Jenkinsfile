@@ -29,5 +29,39 @@ pipeline {
               echo 'Deploying to Production Environment' 
           } 
       }
+    
+     stage('Dev env') 
+      { 
+          steps 
+          { 
+              echo 'Deploying to Production Environment' 
+          } 
+      }
+    
+    
+     stage('Test env') 
+      { 
+          steps 
+          {  
+              echo 'Deploying to Production Environment' 
+          } 
+      }
+    
+     stage('UAT env') 
+      { 
+          steps 
+          { 
+              echo 'Deploying to Production Environment' 
+          } 
+      }
+    
+    stage('Production env') 
+      { 
+          steps 
+          {  
+              echo 'Deploying to Production Environment' 
+          } 
+      }
+    
     }
 }
